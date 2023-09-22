@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "prisma db push && nodemon ./src/index",
-    "start": "prisma db push && node ./src/index",
+    "start": "node dist/app.js",
     "mongo-start": "docker run -d -p 27017-27019:27017-27019 --name mongo-dev adaptable/mongo-replica-set",
     "mongo-stop": "docker rm -f mongo-dev"
   },
@@ -17,6 +17,7 @@
     "express": "~4.16.1",
     "morgan": "~1.9.1",
     "prisma": "^3.14.0",
+     "cors": "^2.8.5",
     "sanitize-html": "^2.7.0"
   },
   "devDependencies": {
